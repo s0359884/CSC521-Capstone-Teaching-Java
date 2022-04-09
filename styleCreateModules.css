@@ -1,0 +1,30 @@
+body {
+    background: rgb(187, 72, 152);
+}
+
+#text{
+
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 96%;
+}
+
+#button{
+
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+    width: 50%;
+}
+
+#box{
+
+    background-color: grey;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+}

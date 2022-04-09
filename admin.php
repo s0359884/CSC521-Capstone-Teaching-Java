@@ -14,6 +14,11 @@ include("functions.php");
         header('location:quizzes.php');
     }
 
+    if(isset($_POST['forEditingModules']))
+    {
+        header('location:createModules.php');
+    }
+
     if(isset($_POST['allGrades']))
     {
         header('location:adminAllGrades.php');
@@ -37,7 +42,7 @@ include("functions.php");
 </head>
 <body>
 <div id = "box">
-//
+
 
 
     <form method="post">
@@ -57,6 +62,7 @@ include("functions.php");
 
 
         ?>" ><br><br>
+        <input id="button" type="submit" name = "forEditingModules" value="Create Module"><br><br>
         <input id="button" type="submit" name = "allGrades" value="All Grades"><br><br>
         <input id="button" type="submit" name = "forLogout" value="Logout"><br><br>
 
