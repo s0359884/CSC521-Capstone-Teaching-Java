@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             if($result && mysqli_num_rows($result)>0)
             {
                 $user_data = mysqli_fetch_assoc($result);
-                if($user_data['user_id'] == 1)
+                if($user_data['user_id'] == 1 && $user_data['password'] === $password)
                 {
                     header("Location:admin.php");
                     die;
