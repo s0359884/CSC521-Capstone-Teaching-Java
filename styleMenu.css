@@ -22,6 +22,17 @@ body {
     width: 100%;
 }
 
+#button2{
+
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+    width: 100%;
+}
+
 #box{
 
     background-color: grey;
