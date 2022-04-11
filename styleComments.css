@@ -1,0 +1,42 @@
+body {
+    background: rgb(187, 72, 152);
+}
+
+#text{
+
+    width:90%;
+    resize: vertical;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    height:80px;
+
+}
+
+#button1{
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+}
+
+#button2{
+    position: relative;
+    margin-left: 80px;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+}
+
+#box{
+
+    background-color: grey;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+}
