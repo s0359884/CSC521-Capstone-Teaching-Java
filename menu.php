@@ -25,6 +25,11 @@ $user_data = check_login($con);
         header('location:vocabulary.php');
     }
 
+    if(isset($_POST['forComments']))
+    {
+        header('location: comments.php');
+    }
+
     if(isset($_POST['forLogout']))
     {
         header('location:logout.php');
@@ -56,7 +61,8 @@ $user_data = check_login($con);
         <input id="button" type="submit" name = "forQuizzes" value="Quizzes"><br><br>
         <input id="button" type="submit" name = "forGrades" value="Grades"><br><br>
         <input id="button" type="submit" name = "forVocab" value="Vocabulary"><br><br>
-        <input id="button" type="submit" name = "forLogout" value="Logout"><br><br>
+        <input id="button" type="submit" name = "forComments" value="Comments"><br><br>
+        <input id="button2" type="submit" name = "forLogout" value="Logout"><br><br>
 
 
 
