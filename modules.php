@@ -27,12 +27,13 @@ if(isset($_POST['variables']))
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Modules!</title>
-    <link rel="stylesheet" href="styleModules.css">
+    <link rel="stylesheet" href="css/styleModules.css">
+    <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
 <div id = "box">
     <form method="post">
-        <div style="font-size: 20px;margin: 10px;color: white;">Modules!</div>
+        <h1>Modules!</h1>
         <input id="button" type="submit" name = "variables" value="Variables"><br><br>
         <input id="button" type="submit" name = "arrays" value="Arrays"><br><br>
         <input id="button" type="submit" name = "dataStructures" value="Data Structures"><br><br>

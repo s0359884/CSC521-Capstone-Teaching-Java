@@ -19,7 +19,8 @@ if(isset($_POST['finish']))
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Module: Variables!</title>
-    <link rel="stylesheet" href="styleModuleVariable3.css">
+    <link rel="stylesheet" href="css/styleModuleVariable3.css">
+    <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
 <div id = "box">
