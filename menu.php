@@ -45,7 +45,8 @@ $user_data = check_login($con);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Let's get learning!</title>
-    <link rel="stylesheet" href="styleMenu.css">
+    <link rel="stylesheet" href="css/styleMenu.css">
+    <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
 
@@ -56,12 +57,12 @@ $user_data = check_login($con);
 
 
     <form method="post">
-        <div style="font-size: 20px;margin: 10px;color: white;">The Java Toolbox</div>
+        <h1>The Java Toolbox</h1>
         <input id="button" type="submit" name = "forModules" value="Modules"><br><br>
         <input id="button" type="submit" name = "forQuizzes" value="Quizzes"><br><br>
         <input id="button" type="submit" name = "forGrades" value="Grades"><br><br>
         <input id="button" type="submit" name = "forVocab" value="Vocabulary"><br><br>
-        <input id="button" type="submit" name = "forComments" value="Comments"><br><br>
+        <input id="button" type="submit" name = "forComments" value="Questions & Comments"><br><br>
         <input id="button2" type="submit" name = "forLogout" value="Logout"><br><br>
 
 
