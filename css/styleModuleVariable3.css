@@ -1,5 +1,6 @@
 body {
-    background: rgb(187, 72, 152);
+    background: rgb(226,0,255);
+    background: radial-gradient(circle, rgba(226,0,255,1) 18%, rgba(226,200,46,1) 82%);
 }
 
 #button2{
