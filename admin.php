@@ -38,7 +38,8 @@ include("functions.php");
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin!</title>
-    <link rel="stylesheet" href="styleAdmin.css">
+    <link rel="stylesheet" href="css/styleAdmin.css">
+    <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
 <div id = "box">
@@ -46,7 +47,7 @@ include("functions.php");
 
 
     <form method="post">
-        <div style="font-size: 20px;margin: 10px;color: white;">The Java Toolbox</div>
+        <h1>The Java Toolbox</h1>
         <input id="button" type="submit" name = "forUsers" value="All Users"><br><br>
         <input id="button" type="submit" name = "forQuizzes" value="Number of Modules: <?php
 
@@ -58,20 +59,11 @@ include("functions.php");
         {
             echo $selectModuleIDRow['total'];
         }
-
-
-
         ?>" ><br><br>
+
         <input id="button" type="submit" name = "forEditingModules" value="Create Module"><br><br>
         <input id="button" type="submit" name = "allGrades" value="All Grades"><br><br>
-        <input id="button" type="submit" name = "forLogout" value="Logout"><br><br>
-
-
-
-
-
-
-
+        <input id="button2" type="submit" name = "forLogout" value="Logout"><br><br>
     </form>
 
 
