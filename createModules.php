@@ -38,22 +38,23 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Module Creation!</title>
-    <link rel="stylesheet" href="styleCreateModules.css">
+    <link rel="stylesheet" href="css/styleCreateModules.css">
+    <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
 
 <div id="box">
 
     <form method="post">
-        <div style="font-size: 20px;margin: 10px;color: white;">Module Creation</div>
+        <h1>Module Creation!</h1>
 
         <input id="text" type="text" name="moduleName" placeholder="Name of Module..."><br><br>
         <input id="text" type="text" name="firstTeaching" placeholder="First Teaching..."><br><br>
         <input id="text" type="text" name="secondTeaching" placeholder="Second Teaching..."><br><br>
         <input id="text" type="text" name="thirdTeaching" placeholder="Third Teaching..."><br><br>
-        <input id="button" type="submit" name = "forAdminMenu" value="Back to Admin Menu"><br><br>
+        <input id="button" type="submit" name = "forAdminMenu" value="Back to Admin Menu">
 
-        <input id="button" type="submit" value="Create Module"><br><br>
+        <input id="button2" type="submit" value="Create Module"><br><br>
     </form>
 </div>
 
