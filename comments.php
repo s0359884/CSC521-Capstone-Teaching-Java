@@ -41,14 +41,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Comments!</title>
-    <link rel="stylesheet" href="styleComments.css">
+    <title>Q & A!</title>
+    <link rel="stylesheet" href="css/styleComments.css">
+    <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
 <div id="box">
 
     <form method="post">
-        <div style="font-size: 20px;margin: 10px;color: white;">Comments!</div>
+        <h1>Q & A!</h1>
         <textarea name="commentsFromUser" id="text" cols="10" rows="10" placeholder="Be specific..."></textarea>
 
         <input id="button1" type="submit" name = "postComment" value="Post Comment">
