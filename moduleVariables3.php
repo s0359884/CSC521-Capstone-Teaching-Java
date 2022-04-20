@@ -8,7 +8,7 @@ $user_data = check_login($con);
 
 if(isset($_POST['finish']))
 {
-    header('location:congrats.php');
+    header('location:congratsTeaching.php');
 }
 ?>
 <!doctype html>
