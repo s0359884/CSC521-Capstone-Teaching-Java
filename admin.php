@@ -3,15 +3,16 @@ session_start();
 
 include("connection.php");
 include("functions.php");
+$user_data = check_login($con);
 
     if(isset($_POST['forUsers']))
     {
         header('location:adminAllUsers.php');
     }
 
-    if(isset($_POST['forQuizzes']))
+    if(isset($_POST['forModules']))
     {
-        header('location:quizzes.php');
+        header('location:adminViewModules.php');
     }
 
     if(isset($_POST['forEditingModules']))
@@ -48,18 +49,9 @@ include("functions.php");
 
     <form method="post">
         <h1>The Java Toolbox</h1>
+        <h2>Admin</h2>
         <input id="button" type="submit" name = "forUsers" value="All Users"><br><br>
-        <input id="button" type="submit" name = "forQuizzes" value="Number of Modules: <?php
-
-        $getMaxModuleIDs = $con->prepare("SELECT count(module_id) as total FROM modules");
-        $getMaxModuleIDs->execute();
-        $getMaxModuleIDsResult = $getMaxModuleIDs->get_result();
-
-        while($selectModuleIDRow = $getMaxModuleIDsResult->fetch_array())
-        {
-            echo $selectModuleIDRow['total'];
-        }
-        ?>" ><br><br>
+        <input id="button" type="submit" name = "forModules" value="View Modules" ><br><br>
 
         <input id="button" type="submit" name = "forEditingModules" value="Create Module"><br><br>
         <input id="button" type="submit" name = "allGrades" value="All Grades"><br><br>

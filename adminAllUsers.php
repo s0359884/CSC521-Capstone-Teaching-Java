@@ -3,6 +3,7 @@ session_start();
 
 include("connection.php");
 include("functions.php");
+$user_data = check_login($con);
 
 
 
@@ -48,7 +49,7 @@ if(isset($_POST['forMenu']))
             ?>
         </p>
 
-        <input id="button2" type="submit" name = "forMenu" value="Back to Admin">
+        <input id="button2" type="submit" name = "forMenu" value="Back to Menu">
     </form>
 
 </body>
