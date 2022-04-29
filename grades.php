@@ -6,7 +6,7 @@ include("functions.php");
 $user_data = check_login($con);
 $user_id = $_SESSION['user_id'];
 
-if(isset($_POST['forMenu']))
+if(isset($_POST['forMenu'])) //redirects back to menu
 {
     header('location:menu.php');
 }
@@ -30,7 +30,7 @@ if(isset($_POST['forMenu']))
         <h1>All Grades!</h1>
 
         <p>
-            <?php
+            <?php           //Shows logged-in user's grades
                 $query = "SELECT quiz, grade FROM logs WHERE $user_id = user_id";
                 $result = mysqli_query($con,$query);
 
@@ -38,12 +38,12 @@ if(isset($_POST['forMenu']))
                 {
                     while($row = $result -> fetch_assoc())
                     {
-                        echo "Quiz: ". $row["quiz"]."<br>". "Grade: ". $row["grade"]."<br>"."<br>";
+                        echo "Quiz: ". $row["quiz"]."<br>". "Grade: ". $row["grade"]." out of 3"."<br>"."<br>";
                     }
                 }
             ?>
         </p>
-
+                            <!-- Redirects to main menu -->
         <input id="button2" type="submit" name = "forMenu" value="Back to Menu">
     </form>
 

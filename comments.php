@@ -5,34 +5,10 @@ include("connection.php");
 include("functions.php");
 $user_data = check_login($con);
 
-if(isset($_POST['forMenu']))
+if(isset($_POST['forMenu']))  //Redirects back to menu
 {
     header('location:menu.php');
 }
-
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
-    $comment = $_POST['commentsFromUser'];
-    $user_id = $_SESSION['user_id'];
-    $email = $user_data['email'];
-
-    if(isset($_POST['postComment']) && !empty($comment))
-    {
-        //posts comments into logs
-        $query = "insert into logs (comments,user_id,email) values ('$comment','$user_id','$email')";
-        mysqli_query($con,$query);
-        echo "Your comment has been sent! The response will be sent per email!";
-    }
-
-    if(isset($_POST['postComment']) && empty($comment))
-    {
-        echo "You must write something!";
-    }
-}
-
-
-
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -46,16 +22,44 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     <link rel="icon" href="images/javaIcon.png">
 </head>
 <body>
-<div id="box">
+<div class = "box">
+    <div class = "a">
+        <form method="post">            <!-- form for comments along with two buttons for post comment and menu  -->
+        <h6 class = "menuTitle" >Q & A</h6><br>
+        <textarea name="commentsFromUser" id="text" cols="40" rows="10" placeholder="Be specific..." maxlength="1000" autofocus></textarea>
 
-    <form method="post">
-        <h1>Q & A!</h1>
-        <textarea name="commentsFromUser" id="text" cols="10" rows="10" placeholder="Be specific..."></textarea>
+        <input id="testButton" type="submit" name = "postComment" value="Post Comment">
+        <input id="testButton2" type="submit" name = "forMenu" value="Back to Menu">
+        </form>
+        <?php
+        if($_SERVER['REQUEST_METHOD'] == "POST")  //Posts comment into logs
+        {
+            $comment = $_POST['commentsFromUser']; //Logged in user comment and data
+            $user_id = $_SESSION['user_id'];
+            $email = $user_data['email'];
+            if(isset($_POST['postComment']) && !empty($comment))
+            {
 
-        <input id="button1" type="submit" name = "postComment" value="Post Comment">
-        <input id="button2" type="submit" name = "forMenu" value="Back to Menu">
-    </form>
+                $query = "insert into logs (comments,user_id,email) values ('$comment','$user_id','$email')";
+                mysqli_query($con,$query);
+                echo "Your comment has been sent! The response will be sent per email!";
+            }
 
+            if(isset($_POST['postComment']) && empty($comment))  //lets user know to not try to post without writing something
+            {
+                echo "You must write something!";
+            }
+        }
+        ?>
+    </div>
+
+
+    <div class = "b"></div>
+    <div class = "c"></div>
+    <div class = "d"></div>
+    <div class = "e"></div>
+
+</div>
 
 
 </body>

@@ -1,8 +1,7 @@
 <?php
-
-function check_login($con)
+function check_login($con) //keeps connection with database
 {
-    if(isset($_SESSION['user_id']))
+    if(isset($_SESSION['user_id'])) //Sets global variable for user info to be carried to all pages visited
     {
         $id = $_SESSION['user_id'];
         $query = "select * from users where user_id = '$id' limit 1";

@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+                                        //TEST PAGE
     include("connection.php");
     include("functions.php");
 

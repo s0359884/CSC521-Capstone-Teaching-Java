@@ -4,19 +4,19 @@ include("connection.php");
 include("functions.php");
 $user_data = check_login($con);
 
-if($_SERVER['REQUEST_METHOD'] == "POST")
+if($_SERVER['REQUEST_METHOD'] == "POST") //post method to create module
 {
     $moduleName = $_POST['moduleName'];
     $firstTeaching = $_POST['firstTeaching'];
     $secondTeaching = $_POST['secondTeaching'];
     $thirdTeaching = $_POST['thirdTeaching'];
 
-    if(isset($_POST['forAdminMenu']))
+    if(isset($_POST['forAdminMenu']))  //redirects to admin menu
     {
         header('location:admin.php');
     }
 
-    if(!empty($moduleName) && !empty($firstTeaching)
+    if(!empty($moduleName) && !empty($firstTeaching)  //makes sure all fields are not empty
         && !empty($secondTeaching) && !empty($thirdTeaching))
     {
         //save to database
@@ -45,20 +45,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 <body>
 
 <div id="box">
-
     <form method="post">
-        <h1>Module Creation!</h1>
-
+        <h1>Module Creation!</h1> <!-- text fields for module creation -->
         <input id="text" type="text" name="moduleName" placeholder="Name of Module..."><br><br>
         <input id="text" type="text" name="firstTeaching" placeholder="First Teaching..."><br><br>
         <input id="text" type="text" name="secondTeaching" placeholder="Second Teaching..."><br><br>
         <input id="text" type="text" name="thirdTeaching" placeholder="Third Teaching..."><br><br>
         <input id="button" type="submit" name = "forAdminMenu" value="Back to Admin Menu">
 
-        <input id="button2" type="submit" value="Create Module"><br><br>
+        <input id="button2" type="submit" value="Create Module"><br><br>  <!-- creates module -->
     </form>
 </div>
-
-
 </body>
 </html>

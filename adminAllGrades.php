@@ -4,7 +4,7 @@ include("connection.php");
 include("functions.php");
 $user_data = check_login($con);
 
-if(isset($_POST['forMenu']))
+if(isset($_POST['forMenu']))  // Option for where to be redirected
 {
     header('location:admin.php');
 }
@@ -28,7 +28,7 @@ if(isset($_POST['forMenu']))
         <h1>All Grades!</h1>
 
         <p>
-            <?php
+            <?php               //Shows all users grades
 
             $query = "SELECT user_id, email, quiz, grade FROM logs";
             $result = mysqli_query($con,$query);
@@ -43,7 +43,7 @@ if(isset($_POST['forMenu']))
 
             ?>
         </p>
-
+                                <!-- Redirects to admin menu -->
         <input id="button2" type="submit" name = "forMenu" value="Back to Admin">
     </form>
 

@@ -4,7 +4,7 @@ include("connection.php");
 include("functions.php");
 $user_data = check_login($con);
 
-if(isset($_POST['forMenu']))
+if(isset($_POST['forMenu']))  //Redirects back to admin menu
 {
     header('location:admin.php');
 }
@@ -27,7 +27,7 @@ if(isset($_POST['forMenu']))
         <h1>All Modules!</h1>
 
         <p>
-            <?php
+            <?php           //Shows all created modules
 
             $query = "SELECT module_name FROM modules";
             $result = mysqli_query($con,$query);
@@ -42,7 +42,7 @@ if(isset($_POST['forMenu']))
 
             ?>
         </p>
-
+                        <!-- Redirects to admin menu -->
         <input id="button2" type="submit" name = "forMenu" value="Back to Menu">
     </form>
 

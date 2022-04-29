@@ -8,7 +8,7 @@ $user_data = check_login($con);
 
 
 
-if(isset($_POST['forMenu']))
+if(isset($_POST['forMenu']))    //Redirects to admin menu
 {
     header('location:admin.php');
 }
@@ -33,7 +33,7 @@ if(isset($_POST['forMenu']))
         <h1>All Users!</h1>
 
         <p>
-            <?php
+            <?php           //Shows list of all users
 
             $query = "SELECT first_name, last_name, email FROM users";
             $result = mysqli_query($con,$query);
@@ -48,7 +48,7 @@ if(isset($_POST['forMenu']))
 
             ?>
         </p>
-
+                                <!-- Redirects back to admin menu  -->
         <input id="button2" type="submit" name = "forMenu" value="Back to Menu">
     </form>
 

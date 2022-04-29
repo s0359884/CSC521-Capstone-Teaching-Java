@@ -3,9 +3,9 @@ session_start();
 
 include("connection.php");
 include("functions.php");
-$user_data = check_login($con);
+$user_data = check_login($con); //user data
 
-    if(isset($_POST['forUsers']))
+    if(isset($_POST['forUsers']))  //Options for where to be redirected
     {
         header('location:adminAllUsers.php');
     }
@@ -47,7 +47,7 @@ $user_data = check_login($con);
 
 
 
-    <form method="post">
+    <form method="post">            <!-- Options for where to be redirected -->
         <h1>The Java Toolbox</h1>
         <h2>Admin</h2>
         <input id="button" type="submit" name = "forUsers" value="All Users"><br><br>
