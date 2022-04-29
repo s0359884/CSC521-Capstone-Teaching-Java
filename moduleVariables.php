@@ -53,7 +53,7 @@ $user_data = check_login($con); //Global variable that keeps user logged in
             }
 
             ?></p>
-            <label for="chk2" id="supMenu">NEXT</label> <!-- Rotates box to next side -->
+            <label for="chk2" id="supMenu2">NEXT</label> <!-- Rotates box to next side -->
         </div>
 
         <div class="c">
@@ -70,12 +70,12 @@ $user_data = check_login($con); //Global variable that keeps user logged in
             }
 
             ?></p>
-            <label for="chk3" id="supMenu">NEXT</label> <!-- Rotates box to next side -->
+            <label for="chk3" id="supMenu3">NEXT</label> <!-- Rotates box to next side -->
         </div>
 
         <div class="d">
             <form action="" method="post" class="frm">
-            <h6 class = "menuTitle" >CONGRATULATIONS</h6><br><br><br><br>
+            <h6 class = "menuTitle" >CONGRATULATIONS</h6><br>
             <p>Be sure to check the "vocabulary" tab that is in the menu for more information!</p>
             <input id="buttonMod1" type="submit" name = "menu" value="BACK TO MENU">
             </form>
